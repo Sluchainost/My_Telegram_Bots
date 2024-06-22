@@ -1,7 +1,8 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import (ReplyKeyboardMarkup, KeyboardButton,
+                           InlineKeyboardButton, InlineKeyboardMarkup)
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
-from lexicon.lexicon_ru import LEXICON_RU
+from lexicon.lexicon_ru import LEXICON_RU, LEXICON_INLINE_BUTTON_RU
 
 # ------- Создаем клавиатуру через ReplyKeyboardBuilder -------
 
@@ -35,4 +36,33 @@ game_kb = ReplyKeyboardMarkup(
               [button_2],
               [button_3]],
     resize_keyboard=True
+)
+
+# ------- Создаем инлайн клавиатуру -------
+
+# Создаем объекты инлайн-кнопок
+big_button_1 = InlineKeyboardButton(
+    text='БОЛЬШАЯ КНОПКА 1',
+    callback_data=[k for k in LEXICON_INLINE_BUTTON_RU.keys()][0]
+)
+
+big_button_2 = InlineKeyboardButton(
+    text='БОЛЬШАЯ КНОПКА 2',
+    callback_data=[k for k in LEXICON_INLINE_BUTTON_RU.keys()][1]
+)
+
+big_button_3 = InlineKeyboardButton(
+    text='БОЛЬШАЯ КНОПКА 3',
+    callback_data=[k for k in LEXICON_INLINE_BUTTON_RU.keys()][2]
+)
+
+big_button_4 = InlineKeyboardButton(
+    text='БОЛЬШАЯ КНОПКА 4',
+    callback_data=[k for k in LEXICON_INLINE_BUTTON_RU.keys()][3]
+)
+
+# Создаем объект инлайн-клавиатуры
+inline_kb = InlineKeyboardMarkup(
+    inline_keyboard=[[big_button_1], [big_button_2],
+                     [big_button_3], [big_button_4]]
 )

@@ -5,6 +5,7 @@ from aiogram.client.bot import DefaultBotProperties
 from aiogram import Bot, Dispatcher
 from config_data.config import Config, load_config
 from handlers import other_handlers, user_handlers
+from keyboards.set_menu import set_main_menu
 
 # Инициализируем логгер
 logger = logging.getLogger(__name__)
@@ -28,6 +29,9 @@ async def main():
     bot = Bot(token=config.tg_bot.token,
               default=DefaultBotProperties(parse_mode='HTML'))
     dp = Dispatcher()
+
+    # Настраиваем кнопку Menu
+    await set_main_menu(bot)
 
     # Регистриуем роутеры в диспетчере
     dp.include_router(user_handlers.router)

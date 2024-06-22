@@ -24,3 +24,17 @@ LEXICON_RU: dict[str, str] = {
     'nobody_won': 'Ничья! 😪\n\nПродолжим? 😏',
     'bot_choice': 'Мой выбор 🤔'
 }
+
+LEXICON_MENU_COMMANDS_RU: dict[str, str] = {
+    '/command_1': 'command_1 desription',
+    '/command_2': 'command_2 desription',
+    '/command_3': 'command_3 desription',
+    '/command_4': 'command_4 desription'
+}
+
+LEXICON_INLINE_BUTTON_RU: dict[str, str] = {
+    'big_button_1_pressed': 'Была нажата БОЛЬШАЯ КНОПКА 1',
+    'big_button_2_pressed': 'Была нажата БОЛЬШАЯ КНОПКА 2',
+    'big_button_3_pressed': 'Была нажата БОЛЬШАЯ КНОПКА 3',
+    'big_button_4_pressed': 'Была нажата БОЛЬШАЯ КНОПКА 4'
+}
