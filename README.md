@@ -1,2 +1,7 @@
-# Telegram-Bot-1
-Create telegram bot first time
+# My_Telegram_Bots
+All the telegram bots I created will be located here
+
+
+
+
+Expect detailed descriptions of projects ...
